@@ -1,18 +1,20 @@
 import { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import { theme } from '../styles/theme';
+import { QueryClientProvider } from 'react-query';
 
-import { QueryClient, QueryClientProvider } from 'react-query';
+
+import { theme } from '../styles/theme';
 import { SidebarDrawerProvider } from '../contexts/SidebarDrawerContent';
 import { makeServer } from '../services/mirage/index';
+import { queryClient } from '../services/queryClients';
 
 //antes da função verificar se o ambiente é o correto
 if (process.env.NODE_ENV === 'development') {
   makeServer();
 }
 
-const queryClient = new QueryClient()
+
 
 //resetCSS serve para remover todas as estilizações padrão do html
 function MyApp({ Component, pageProps }: AppProps) {
