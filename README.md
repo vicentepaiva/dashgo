@@ -9,7 +9,7 @@
  The project was based on the 4º modulo off the Trilha ReactJs Ignite, this project was created using Prisma data banking,a user CRUD and a auth sistem based on the authorization and authentication class.
  
  
- # How to executing the Proiject
+ # How to executing the Project
  
  . Clone the repositorie </br>
  . Install the dependencies Yarn </br>
